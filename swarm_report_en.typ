@@ -1,6 +1,6 @@
 // Refusal and Invitation Acceptance in a Four-Agent Liar's Bar Sandbox: An Exploratory Audit
 // Swarm Alignment Hackathon 2026 — Track 4 (Oversight & monitoring). Team: EIRAKU (Calpa Liu).
-// Converted from report_draft_en.md (v3.1: 40 episodes in two batches, M1 + D13 replication).
+// Source of truth: this Typst file; compiled to swarm_report_en.pdf (v2.5, 20261108).
 // Compile: typst compile paper/swarm_report_en.typ paper/swarm_report_en.pdf
 
 #set page(paper: "a4", margin: (x: 1.8cm, y: 1.9cm), numbering: "1")
