@@ -1,6 +1,16 @@
-# Refusal and Invitation Acceptance in a Four-Agent Liar's Bar Sandbox: An Exploratory Audit
+<div align="center">
 
-**Team EIRAKU · Calpa Liu** — Swarm Alignment Hackathon 2026 (Apart Research), Track 4: Multi-Agent Oversight and Control.
+<img src="project-image.png" alt="Refusal and Invitation Acceptance in a Four-Agent Liar's Bar Sandbox" width="640">
+
+# Refusal and Invitation Acceptance in a Four-Agent Liar's Bar Sandbox
+
+**An Exploratory Audit**
+
+*Team EIRAKU · Swarm Alignment Hackathon 2026 · Track 4: Multi-Agent Oversight and Control*
+
+![Status](https://img.shields.io/badge/status-final_v2.5-2ea44f) ![Track](https://img.shields.io/badge/Apart_2026-Track_4-blue) ![License](https://img.shields.io/badge/license-MIT-green)
+
+</div>
 
 ## Abstract
 
@@ -8,16 +18,32 @@ Behavioral baselines for detecting coordination among LLM agents remain scarce: 
 
 ## Contents
 
-- `swarm_report_en.pdf` — final report (7 pages: 4-page body + references/appendices)
-- `swarm_report_en.typ` — Typst source
-- `fig_pairs.svg` — Figure 1 (per-ordered-pair challenge rates with Clopper–Pearson intervals)
-- `sha256.txt` — checksums
+| File | Description |
+|---|---|
+| `swarm_report_en.pdf` | Final report — 7 pages (4-page body + references/appendices), v2.5 |
+| `swarm_report_en.typ` | Typst source (single source of truth) |
+| `fig_pairs.svg` | Figure 1 — per-ordered-pair challenge rates with Clopper–Pearson intervals |
+| `project-image.png` | Project cover (Midori) |
+| `sha256.txt` | Checksums |
 
-## Reproduction
+## Reproduce
 
-Analysis commands and per-episode manifests are documented in the report (Appendix B); the full experiment records (40 main-batch + positive-control episodes, deviation ledger D1–D15) live in the working repository and are available to organizers on request. `typst compile swarm_report_en.typ` rebuilds the PDF.
+```bash
+# Rebuild the PDF
+typst compile swarm_report_en.typ
+
+# Analysis commands (per-batch, never pooled — see Appendix B)
+python3 analyze_g3.py runs/m1_d*/record.json
+python3 analyze_g3.py runs/rep*/record.json
+```
+
+Per-episode manifests, record SHA-256 hashes, and the deviation ledger (D1–D15) are documented in the report appendix; full experiment records are available to organizers on request.
 
 ## Notes
 
 - Preregistration was approved after data collection began; all episodes are classified as exploratory.
-- Repository is private during review; it will be made public after the sprint ends.
+- This repository is private during review and will be made public after the sprint ends.
+
+## License
+
+[MIT](LICENSE) — © 2026 Calpa Liu (Team EIRAKU)
